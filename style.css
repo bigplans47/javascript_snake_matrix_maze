@@ -1,20 +1,34 @@
 .intro {
-  color: green;
+  color: #4B0082;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 5px;
   /* background-color: yellow; */
 }
 
 h1 {
-  background-color: yellow;
+  background-color: #E6E6FA;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .intro p {
   color: orange;
 }
 
-.intro p span {
-  color: blue;
+.intro button span {
+  color: #DDA0DD;
 }
 
 p {
   font-size: 18px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #9400D3;
+  color: white;
+  font-size: 14px;
 }
