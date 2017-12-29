@@ -114,3 +114,17 @@ function pathMarker (torow, tocolumn) {
 
 pathMarker(toRow, toColumn);
 console.log(array);
+
+document.getElementById('test1').innerHTML = 'really';
+
+// function showNumber(a) {
+//   console.log(a);
+// }
+//
+// function adder(a,b) {
+//   showNumber(a);
+//
+//   return(a+b)
+// }
+
+//remember you can call a function in a function!

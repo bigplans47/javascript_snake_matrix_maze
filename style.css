@@ -1,0 +1,20 @@
+.intro {
+  color: green;
+  /* background-color: yellow; */
+}
+
+h1 {
+  background-color: yellow;
+}
+
+.intro p {
+  color: orange;
+}
+
+.intro p span {
+  color: blue;
+}
+
+p {
+  font-size: 18px;
+}
