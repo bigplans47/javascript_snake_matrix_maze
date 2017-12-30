@@ -121,34 +121,35 @@ document.getElementById('addWord').innerHTML = 'here';
 
 
 function showArray() {
-  let br = document.createElement('br');
-  let para = document.createElement('h1');
-  let length = originalArray.length
-  // let linebreak = document.createElement("br");
-  console.log(length);
-  for (var i = 0; i < length; i++) {
-    let node = document.createTextNode(originalArray[i]);
-    console.log(node);
-    para.appendChild(node);
-    para.appendChild(br);
+  var para = document.createElement('div');
+  para.setAttribute('class', 'box');
+  var length = originalArray.length;
+  // var br = document.createElement('br');
+  for (let i = 0; i < length; i++) {
+    var single = originalArray[i].toString().split(',');
+    console.log(i, "yo");
+    for (let i = 0; i < single.length; i++) {
+      var cell = document.createElement('h1');
+      cell.append(single[i])
+      para.append(cell);
+    }
+    // para.append(br);
+    let node = document.createTextNode(single);
+    // console.log(single[1]);
+    // para.appendChild(node);
   }
 
+  let element = document.getElementById('intro');
+  element.append(para);
+  search(fromRow,fromColumn,toRow,toColumn);
   // let node0 = document.createTextNode(originalArray[0]);
   // let node1 = document.createTextNode(originalArray[1]);
   // let node2 = document.createTextNode(originalArray[2]);
-  // let node3 = document.createTextNode(originalArray[3]);
-  // let node4 = document.createTextNode(originalArray[4]);
-  // let node5 = document.createTextNode(originalArray[5]);
   // para.appendChild(node0);
   // para.appendChild(br);
   // para.appendChild(node1);
   // para.appendChild(node2);
-  // para.appendChild(node3);
-  // para.appendChild(node4);
-  // para.appendChild(node5);
-  let element = document.getElementById('intro');
-  element.append(para);
-  search(fromRow,fromColumn,toRow,toColumn);
+
 
 
 }

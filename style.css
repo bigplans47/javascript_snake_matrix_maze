@@ -3,7 +3,10 @@
   border-style: solid;
   padding: 10px;
   border-radius: 5px;
-  /* background-color: yellow; */
+  display: grid;
+  /* grid-gap: 20px 20px; */
+  grid-template-columns: auto auto auto auto auto auto;
+  /* width: 100% */
 }
 
 h1 {
@@ -13,22 +16,36 @@ h1 {
   border-radius: 5px;
 }
 
-#intro p {
-  color: orange;
-}
-
-#intro button span {
+button span {
   color: #DDA0DD;
 }
 
-p {
+h2 {
   font-size: 18px;
+  color: #9400D3;
+  font-size: 18px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 2px;
+  border-color: #DA70D6;
 }
 
 button {
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #9400D3;
   color: white;
   font-size: 14px;
+  margin-bottom: 10px;
+  border-color: black;
+  border-width: 3px;
+}
+
+.box {
+  background-color: yellow;
+  margin-top: 20px;
+  /* width: 160px; */
+  text-align: center;
+  /* display: inline-grid ; */
+  /* float: left; */
 }
