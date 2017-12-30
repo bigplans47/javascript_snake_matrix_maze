@@ -7,7 +7,7 @@ var toRow = 5;
 var toColumn = 4;
 var startStep = 1;
 
-var array = [
+const originalArray = [
   [0,-1,0, 0, 0,0],
   [0,-1,0, 0, 0,0],
   [0,-1,0, 0, 0,0],
@@ -15,6 +15,8 @@ var array = [
   [0, 0,0,-1, 0,0],
   [0, 0,0,-1, 0,0]
 ];
+
+var array = originalArray;
 
 console.log(array);
 function illegal (fromrow, fromcolumn) {
@@ -38,7 +40,7 @@ function illegal (fromrow, fromcolumn) {
 }
 
 function search(fromrow, fromcolumn, torow, tocolumn, steps=startStep) {
-  console.log(steps);
+  // console.log(steps);
 
   if (illegal(fromrow,fromcolumn)) {
     return;
@@ -56,7 +58,7 @@ function search(fromrow, fromcolumn, torow, tocolumn, steps=startStep) {
   search(fromrow,fromcolumn+1, torow, tocolumn, steps+1);
 };
 
-search(fromRow,fromColumn,toRow,toColumn);
+
 console.log(array);
 
 function check(row,column,val) { //returns true if array[row][column] has val
@@ -116,10 +118,39 @@ pathMarker(toRow, toColumn);
 console.log(array);
 
 document.getElementById('addWord').innerHTML = 'here';
-document.getElementById('test1').onclick
+
 
 function showArray() {
-  
+  let br = document.createElement('br');
+  let para = document.createElement('h1');
+  let length = originalArray.length
+  // let linebreak = document.createElement("br");
+  console.log(length);
+  for (var i = 0; i < length; i++) {
+    let node = document.createTextNode(originalArray[i]);
+    console.log(node);
+    para.appendChild(node);
+    para.appendChild(br);
+  }
+
+  // let node0 = document.createTextNode(originalArray[0]);
+  // let node1 = document.createTextNode(originalArray[1]);
+  // let node2 = document.createTextNode(originalArray[2]);
+  // let node3 = document.createTextNode(originalArray[3]);
+  // let node4 = document.createTextNode(originalArray[4]);
+  // let node5 = document.createTextNode(originalArray[5]);
+  // para.appendChild(node0);
+  // para.appendChild(br);
+  // para.appendChild(node1);
+  // para.appendChild(node2);
+  // para.appendChild(node3);
+  // para.appendChild(node4);
+  // para.appendChild(node5);
+  let element = document.getElementById('intro');
+  element.append(para);
+  search(fromRow,fromColumn,toRow,toColumn);
+
+
 }
 
 // function showNumber(a) {

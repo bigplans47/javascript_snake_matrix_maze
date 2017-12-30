@@ -1,4 +1,4 @@
-.intro {
+#intro {
   color: #4B0082;
   border-style: solid;
   padding: 10px;
@@ -13,11 +13,11 @@ h1 {
   border-radius: 5px;
 }
 
-.intro p {
+#intro p {
   color: orange;
 }
 
-.intro button span {
+#intro button span {
   color: #DDA0DD;
 }
 
