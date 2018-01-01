@@ -39,6 +39,7 @@ button {
   margin-bottom: 10px;
   border-color: black;
   border-width: 3px;
+  width: 15%;
 }
 
 .box {

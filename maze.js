@@ -121,7 +121,8 @@ document.getElementById('addWord').innerHTML = 'here';
 
 function showArray() {
   var el;
-  var fragment = document.createDocumentFragment();
+  var dubDiv = document.createElement('div');
+  // fragment.setAttribute('class', 'box');
   var length = originalArray.length;
   var theIntro = document.getElementById(intro);
   console.log(theIntro);
@@ -131,21 +132,20 @@ function showArray() {
     for (let i = 0; i < single.length; i++) {
       var altArray = [];
       el = document.createElement('button');
-      el.innerText = single[i]+counter;
+      el.innerText = single[i];
       altArray =  altArray.push(altArray,counter);
       console.log(single,counter);
-      fragment.appendChild(el);
+      dubDiv.appendChild(el);
       counter = counter +1;
       if (altArray.length == 6) {
         altArray = [];
-        var br = document.createElement('BR');
-
       }
     }
   }
-
   let element = document.getElementById('intro');
-  element.append(fragment);
+  element.append(dubDiv);
+  var br = document.createElement('BR');
+  element.append(br);
   search(fromRow,fromColumn,toRow,toColumn);
 }
 
