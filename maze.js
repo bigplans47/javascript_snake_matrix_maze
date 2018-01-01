@@ -124,7 +124,6 @@ function showArray() {
   var dubDiv = document.createElement('div');
   // fragment.setAttribute('class', 'box');
   var length = originalArray.length;
-  var theIntro = document.getElementById(intro);
   console.log(theIntro);
   var counter = 0;
   for (let i = 0; i < length; i++) {
@@ -146,6 +145,9 @@ function showArray() {
   element.append(dubDiv);
   var br = document.createElement('BR');
   element.append(br);
+  console.log(theIntro);
+  var theIntro = document.getElementById('addWord');
+  theIntro.innerText = 'Click the button again for solution';
   search(fromRow,fromColumn,toRow,toColumn);
 }
 
