@@ -129,16 +129,11 @@ function showArray() {
   for (let i = 0; i < length; i++) {
     var single = originalArray[i].toString().split(',');
     for (let i = 0; i < single.length; i++) {
-      var altArray = [];
       el = document.createElement('button');
       el.innerText = single[i];
-      altArray =  altArray.push(altArray,counter);
-      console.log(single,counter);
+      console.log(counter);
       dubDiv.appendChild(el);
       counter = counter +1;
-      if (altArray.length == 6) {
-        altArray = [];
-      }
     }
   }
   let element = document.getElementById('intro');
