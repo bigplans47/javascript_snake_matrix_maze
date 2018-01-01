@@ -119,67 +119,34 @@ console.log(array);
 
 document.getElementById('addWord').innerHTML = 'here';
 
-
-
 function showArray() {
   var el;
   var fragment = document.createDocumentFragment();
-  var para = document.createElement('div');
-  // para.setAttribute('class', 'box');
   var length = originalArray.length;
-  // var br = document.createElement('br');
+  var theIntro = document.getElementById(intro);
+  console.log(theIntro);
   var counter = 0;
   for (let i = 0; i < length; i++) {
     var single = originalArray[i].toString().split(',');
-    console.log(single,0);
-    let altArray = [];
     for (let i = 0; i < single.length; i++) {
-      el = document.createElement('div');
-
-      // var myid = i;
-      // var cell = document.createElement('p');
-      // cell.setAttribute('id', counter)
-      // let joined = altArray.join(" ")
-      // let element2 = document.getElementById('addWord');
-
-      // window.onload = function() {
-        function what() {
-        console.log(single,counter);
-        el.innerText = single[i]+counter;
-        fragment.appendChild(el);
-        para.appendChild(fragment);
-        // document.getElementById(counter).innerHTML = single[i];
-        }
-        what();
-      // }
-
-      // para.append(cell);
-      // altArray.push(single[i])
-      // if (altArray.length == single.length) {
-      //
-      // }
+      var altArray = [];
+      el = document.createElement('button');
+      el.innerText = single[i]+counter;
+      altArray =  altArray.push(altArray,counter);
+      console.log(single,counter);
+      fragment.appendChild(el);
       counter = counter +1;
-    }
-    // para.append(br);
-    let node = document.createTextNode(single);
-    // console.log(single[1]);
-    // para.appendChild(node);
+      if (altArray.length == 6) {
+        altArray = [];
+        var br = document.createElement('BR');
 
+      }
+    }
   }
 
   let element = document.getElementById('intro');
-  element.append(para);
+  element.append(fragment);
   search(fromRow,fromColumn,toRow,toColumn);
-  // let node0 = document.createTextNode(originalArray[0]);
-  // let node1 = document.createTextNode(originalArray[1]);
-  // let node2 = document.createTextNode(originalArray[2]);
-  // para.appendChild(node0);
-  // para.appendChild(br);
-  // para.appendChild(node1);
-  // para.appendChild(node2);
-
-
-
 }
 
 
