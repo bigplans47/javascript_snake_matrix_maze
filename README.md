@@ -1,0 +1,1 @@
+Go to 'https://bigplans47.github.io/javascript_snake_matrix_maze/index.html' and open the console log to see the array get sorted through with option+command+j in google chrome on mac, note in the elements tab the addition of 36 new button elements.
