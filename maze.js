@@ -4,21 +4,21 @@ var maxColumns = 6;
 var fromRow = 0;
 var fromColumn = 0;
 var toRow = 5;
-var toColumn = 4;
+var toColumn = 5;
 var startStep = 1;
 
 const originalArray = [
   [0,-1,0, 0, 0,0],
   [0,-1,0, 0, 0,0],
   [0,-1,0, 0, 0,0],
-  [0,-1,0,-1,-1,0],
-  [0, 0,0,-1, 0,0],
-  [0, 0,0,-1, 0,0]
+  [0,-1,0,-1, 0,0],
+  [0, 0,0,-1, -1,0],
+  [0, 0,0,-1, -1,0]
 ];
 
 var array = originalArray;
 
-console.log(array);
+// console.log(array);
 function illegal (fromrow, fromcolumn) {
   if (fromrow < 0) {
     return true;
@@ -58,8 +58,6 @@ function search(fromrow, fromcolumn, torow, tocolumn, steps=startStep) {
   search(fromrow,fromcolumn+1, torow, tocolumn, steps+1);
 };
 
-
-console.log(array);
 
 function check(row,column,val) { //returns true if array[row][column] has val
   if (!illegal(row,column) && array[row][column] == val) {
@@ -131,6 +129,10 @@ function showArray() {
     for (let i = 0; i < single.length; i++) {
       el = document.createElement('button');
       el.innerText = single[i];
+      if (el.innerText == -1) {
+        el.setAttribute('class', 'wall');
+        console.log('wall created')
+      }
       console.log(counter);
       dubDiv.appendChild(el);
       counter = counter +1;

@@ -66,11 +66,11 @@ div button:hover {
   width: 15%;
 }
 
-.box {
-  background-color: yellow;
-  margin-top: 20px;
+div button.wall {
+  background-color: black;
+  /* margin-top: 20px; */
   /* width: 160px; */
-  text-align: center;s
+  /* text-align: center;s */
   /* display: inline-grid ; */
   /* float: left; */
 }
